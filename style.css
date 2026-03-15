@@ -1,0 +1,198 @@
+:root {
+    --primary: #6C63FF;
+    --accent: #FF6584;
+    --bg: #0F172A;
+    --card: #1E293B;
+    --text: #E2E8F0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+
+
+.nawigacja {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(30,41,59,0.95);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.linki-glowne {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.linki-glowne a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+.linki-glowne a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: 0.3s;
+}
+
+.linki-glowne a:hover {
+    color: var(--primary);
+}
+
+.linki-glowne a:hover::after {
+    width: 100%;
+}
+
+
+
+.hero {
+    text-align: center;
+    padding: 150px 10%;
+    background: linear-gradient(135deg, #6C63FF, #9333EA);
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+.hero h1:hover {
+    transform: scale(1.05);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.glowne-eventy {
+    padding: 15px 35px;
+    background: white;
+    color: #0F172A;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.glowne-eventy:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+
+
+.eventy {
+    padding: 80px 8%;
+}
+
+.eventy h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.eventy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.karty-eventowe {
+    background: var(--card);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.karty-eventowe:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(108,99,255,0.5);
+}
+
+.karty-eventowe img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.karty-eventowe:hover img {
+    transform: scale(1.1);
+}
+
+.eventy-info {
+    padding: 20px;
+}
+
+.logowanie {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logowanie:hover {
+    background: var(--accent);
+    transform: scale(1.1);
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--card);
+    margin-top: 60px;
+}
+
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .nawigacja {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
