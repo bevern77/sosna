@@ -14,8 +14,8 @@ session_start();
     <div class="logo">Sosna Event</div>
     <ul class="linki-glowne">
         <li><a href="index.php">Strona główna</a></li>
-        <li><a href="budowa.html">Wydarzenia</a></li>
-        <li><a href="budowa.html">Kontakt</a></li>
+        <li><a href="q.php">Wydarzenia</a></li>
+        <li><a href="kontakt.php">Kontakt</a></li>
 
         <?php if(isset($_SESSION['user_id'])): ?>
             <li>Witaj, <?= htmlspecialchars($_SESSION['user_login']) ?>!</li>
