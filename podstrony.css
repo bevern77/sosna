@@ -1,0 +1,195 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111827; 
+    color: #ffffff;
+}
+
+
+nav {
+    background-color: #1f2937;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #374151;
+}
+
+nav .logo a {
+    color: #8b5cf6;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav .nav-links a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: #8b5cf6;
+}
+
+
+.btn-login {
+    background-color: transparent;
+    border: 1px solid #8b5cf6;
+    color: #8b5cf6 !important;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.btn-register {
+    background-color: #8b5cf6;
+    color: #ffffff !important;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.btn-login:hover {
+    background-color: rgba(139, 92, 246, 0.1);
+}
+.btn-register:hover {
+    background-color: #7c3aed;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111827;
+    color: #6b7280;
+    font-size: 14px;
+    border-top: 1px solid #1f2937;
+    margin-top: 40px;
+}
+
+
+.event-header {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 40px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.header-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.header-badge {
+    display: inline-block;
+    background-color: #8b5cf6;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.details-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.description-box h2 {
+    font-size: 24px;
+    border-bottom: 2px solid #374151;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #e5e7eb;
+}
+
+.description-box p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #9ca3af;
+}
+
+.booking-card {
+    background-color: #1f2937;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    height: fit-content;
+}
+
+.info-row {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    color: #9ca3af;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 16px;
+    color: #f3f4f6;
+    font-weight: 600;
+}
+
+.btn-buy {
+    display: block;
+    width: 100%;
+    background-color: #8b5cf6;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-buy:hover {
+    background-color: #7c3aed;
+}
+
+.tickets-left {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #ef4444; 
+}
