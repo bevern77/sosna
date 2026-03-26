@@ -1,3 +1,10 @@
+:root {
+    --primary: #6C63FF;
+    --accent: #FF6584;
+    --bg: #0F172A;
+    --card: #1E293B;
+    --text: #E2E8F0;
+}
 
 * {
     box-sizing: border-box;
@@ -6,34 +13,83 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #111827; /* Ciemne tło */
-    color: #ffffff;
+    font-family: 'Verdana', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
 }
 
-
-nav {
-    background-color: #1f2937;
-    padding: 20px 50px;
+.nawigacja {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #374151;
+    padding: 20px 8%;
+    background: rgba(30,41,59,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #334155;
 }
 
-nav a {
-    color: #e5e7eb;
+.logo a {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary);
     text-decoration: none;
-    margin-right: 25px;
-    font-size: 16px;
-    font-weight: 600;
-    transition: color 0.3s;
+    transition: 0.3s;
+    display: inline-block;
 }
 
-nav a:hover {
-    color: #8b5cf6; 
+.logo a:hover {
+    transform: scale(1.05);
 }
 
+.linki-glowne {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.linki-glowne a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+.linki-glowne a:not(.logowanie)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: 0.3s;
+}
+
+.linki-glowne a:not(.logowanie):hover {
+    color: var(--primary);
+}
+
+.linki-glowne a:not(.logowanie):hover::after {
+    width: 100%;
+}
+
+.linki-glowne .logowanie {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary) !important; 
+    transition: 0.3s;
+}
+
+.linki-glowne .logowanie:hover {
+    background: var(--primary);
+    color: white !important;
+    transform: scale(1.05);
+}
 
 .container {
     max-width: 1400px;
@@ -50,7 +106,7 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    border-bottom: 1px solid #374151;
+    border-bottom: 1px solid #334155;
     padding-bottom: 10px;
 }
 
@@ -61,7 +117,6 @@ nav a:hover {
     margin: 0;
 }
 
-
 .strzalki {
     display: flex;
     gap: 10px;
@@ -70,7 +125,7 @@ nav a:hover {
 .strzalka {
     width: 32px;
     height: 32px;
-    background-color: #374151; 
+    background-color: var(--card); 
     color: white;
     border-radius: 50%;
     display: flex;
@@ -82,7 +137,7 @@ nav a:hover {
 }
 
 .strzalka:hover {
-    background-color: #8b5cf6; 
+    background-color: var(--primary); 
     transform: scale(1.1);
 }
 
@@ -92,27 +147,25 @@ nav a:hover {
     overflow-x: auto;
     padding-bottom: 15px;
     scrollbar-width: thin;
-    scrollbar-color: #8b5cf6 #1f2937; 
+    scrollbar-color: var(--primary) var(--card); 
 }
-
 
 .karuzela::-webkit-scrollbar {
     height: 8px;
 }
 .karuzela::-webkit-scrollbar-track {
-    background: #1f2937;
+    background: var(--card);
     border-radius: 4px;
 }
 .karuzela::-webkit-scrollbar-thumb {
-    background: #8b5cf6;
+    background: var(--primary);
     border-radius: 4px;
 }
-
 
 .karta {
     width: 250px;
     flex-shrink: 0;
-    background-color: #1f2937;
+    background-color: var(--card);
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -123,6 +176,7 @@ nav a:hover {
 
 .karta:hover {
     transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(108,99,255,0.2);
 }
 
 .karta img {
@@ -134,7 +188,7 @@ nav a:hover {
 .karta h3 {
     font-size: 16px;
     margin: 15px 15px 10px 15px;
-    color: #f3f4f6;
+    color: var(--text);
     font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
@@ -145,8 +199,8 @@ nav a:hover {
     margin: auto 15px 20px 15px;
     display: inline-block;
     background-color: transparent;
-    border: 1px solid #8b5cf6;
-    color: #8b5cf6;
+    border: 1px solid var(--primary);
+    color: var(--primary);
     padding: 8px 15px;
     text-align: center;
     text-decoration: none;
@@ -157,6 +211,18 @@ nav a:hover {
 }
 
 .link-zamow:hover {
-    background-color: #8b5cf6;
+    background-color: var(--primary);
     color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .nawigacja {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .linki-glowne {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
