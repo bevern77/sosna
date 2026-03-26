@@ -6,13 +6,20 @@
     <link rel="stylesheet" href="stylowanie.css">
 </head>
 <body>
+        <link rel="stylesheet" href="stylowanie.css?v=6">
 
-    <nav>
-        <a href="index.php">Strona Główna</a>
-        <a href="wydarzenia.php">Wydarzenia</a>
-        <a href="logowanie.php">Logowanie</a>
+    <nav class="nawigacja">
+        <div class="logo">
+            <a href="index.php">Sosna Event</a>
+        </div>
+        <div class="linki-glowne">
+            <a href="index.php">Strona główna</a>
+            <a href="q.php">Wydarzenia</a>
+            <a href="kontakt.php">Kontakt</a>
+            <a href="Logowanie/login.php" class="logowanie">Zaloguj</a>
+            <a href="Logowanie/register.php" class="logowanie">Zarejestruj się</a>
+        </div>
     </nav>
-
     <div class="container">
         <?php
         
