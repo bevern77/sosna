@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt i Pomoc - Sosna Event</title>
-    <link rel="stylesheet" href="kontakt_c.css">
+    <link rel="stylesheet" href="kontakt_c.css?v=2">
 </head>
 <body>
 
@@ -29,23 +29,35 @@
 
     <div class="contact-container">
         
-        <div class="contact-info-box">
-            <h2>Dane kontaktowe</h2>
+        <div class="left-column" style="display: flex; flex-direction: column; gap: 20px;">
             
-            <div class="contact-detail">
-                <strong>Siedziba firmy:</strong>
-                <p>Sosna Event Sp. z o.o.<br>ul. Kociborska 31<br>31-301 Modliborzyce</p>
+            <div class="contact-info-box">
+                <h2>Dane kontaktowe</h2>
+                
+                <div class="contact-detail">
+                    <strong>Siedziba firmy:</strong>
+                    <p>Sosna Event Sp. z o.o.<br>ul. Kociborska 31<br>31-301 Modliborzyce</p>
+                </div>
+                
+                <div class="contact-detail">
+                    <strong>Infolinia biletowa:</strong>
+                    <p>+48 540 140 220<br>(Czynna pn-pt, 08:00 - 16:00)</p>
+                </div>
+                
+                <div class="contact-detail">
+                    <strong>Adres e-mail:</strong>
+                    <p>pomoc@sosnaevent.pl</p>
+                </div>
             </div>
-            
-            <div class="contact-detail">
-                <strong>Infolinia biletowa:</strong>
-                <p>+48 540 140 220<br>(Czynna pn-pt, 08:00 - 16:00)</p>
+
+            <div class="contact-info-box">
+                <h2>Dokumenty</h2>
+                <div class="contact-detail">
+                    <p style="margin-bottom: 15px;">Pobierz aktualny regulamin serwisu oraz zasady rezerwacji biletów (plik PDF).</p>
+                    <a href="regulamin.pdf" class="btn-download" target="_blank">Pobierz Regulamin</a>
+                </div>
             </div>
-            
-            <div class="contact-detail">
-                <strong>Adres e-mail:</strong>
-                <p>pomoc@sosnaevent.pl</p>
-            </div>
+
         </div>
 
         <div class="faq-box">
