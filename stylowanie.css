@@ -1,6 +1,4 @@
-/* =========================================
-   WSPÓLNE STYLE (DLA OBU STRON)
-   ========================================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,7 +11,7 @@ body {
     color: #ffffff;
 }
 
-/* --- NAWIGACJA --- */
+
 nav {
     background-color: #1f2937;
     padding: 20px 50px;
@@ -33,12 +31,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #8b5cf6; /* Fioletowy akcent */
+    color: #8b5cf6; 
 }
 
-/* =========================================
-   STYLE DLA PODSTRONY Z KARUZELAMI (Twój kod)
-   ========================================= */
+
 .container {
     max-width: 1400px;
     margin: 40px auto;
@@ -65,7 +61,7 @@ nav a:hover {
     margin: 0;
 }
 
-/* Strzałki do przewijania */
+
 .strzalki {
     display: flex;
     gap: 10px;
@@ -74,7 +70,7 @@ nav a:hover {
 .strzalka {
     width: 32px;
     height: 32px;
-    background-color: #374151; /* Ciemnoszare tło strzałki */
+    background-color: #374151; 
     color: white;
     border-radius: 50%;
     display: flex;
@@ -86,21 +82,20 @@ nav a:hover {
 }
 
 .strzalka:hover {
-    background-color: #8b5cf6; /* Podświetlenie na fioletowo */
+    background-color: #8b5cf6; 
     transform: scale(1.1);
 }
 
-/* Pozioma karuzela (scroll) */
 .karuzela {
     display: flex;
     gap: 20px;
     overflow-x: auto;
     padding-bottom: 15px;
     scrollbar-width: thin;
-    scrollbar-color: #8b5cf6 #1f2937; /* Kolor scrollbara */
+    scrollbar-color: #8b5cf6 #1f2937; 
 }
 
-/* Wygląd scrollbara w Chrome/Edge */
+
 .karuzela::-webkit-scrollbar {
     height: 8px;
 }
@@ -113,7 +108,7 @@ nav a:hover {
     border-radius: 4px;
 }
 
-/* Pojedyncza karta wydarzenia w karuzeli */
+
 .karta {
     width: 250px;
     flex-shrink: 0;
@@ -127,7 +122,7 @@ nav a:hover {
 }
 
 .karta:hover {
-    transform: translateY(-5px); /* Karta lekko unosi się po najechaniu */
+    transform: translateY(-5px); 
 }
 
 .karta img {
@@ -143,7 +138,7 @@ nav a:hover {
     font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* ... gdy tekst jest za długi */
+    text-overflow: ellipsis;
 }
 
 .link-zamow {
