@@ -408,3 +408,24 @@ footer {
     margin-top: 10px;
     padding-top: 15px;
 }
+
+
+.btn-download {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #8b5cf6;
+    color: #8b5cf6;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-download:hover {
+    background-color: #8b5cf6;
+    color: #ffffff;
+}
