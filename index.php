@@ -19,7 +19,9 @@ session_start();
         <li><a href="kontakt.php">Kontakt</a></li>
 
         <?php if(isset($_SESSION['user_id'])): ?>
-            <li style="color: var(--primary); font-weight: bold; margin-right: 15px;">Witaj, <?= htmlspecialchars($_SESSION['user_login']) ?>!</li>
+            <li>
+            <a href="moje_konto.php" style="color: var(--primary); font-weight: bold; margin-right: 15px; text-decoration: none;">
+        Witaj <?= htmlspecialchars($_SESSION['user_login']) ?>!</a></li>
             <li><a href="Logowanie/logout.php" class="logowanie">Wyloguj się</a></li>
         <?php else: ?>
             <li><a href="Logowanie/login.php" class="logowanie">Zaloguj</a></li>
