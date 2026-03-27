@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!isset($_GET['id']) || empty($_GET['id'])) {
     die("<h2 style='color:white; text-align:center; margin-top:50px;'>Błąd: Nie wybrano wydarzenia. <a href='q.php' style='color:#8b5cf6;'>Wróć na stronę główną</a></h2>");
 }
@@ -57,8 +58,14 @@ $img_url = "https://picsum.photos/seed/" . $event['id'] . "event/1200/500";
             <a href="index.php">Strona główna</a>
             <a href="q.php">Wydarzenia</a>
             <a href="kontakt.php">Kontakt</a>
-            <a href="Logowanie/login.php" class="btn-login">Zaloguj</a>
-            <a href="Logowanie/register.php" class="btn-register">Zarejestruj się</a>
+           <?php if (isset($_SESSION['user_id'])): ?>
+                <a href="moje_konto.php" style="color: var(--primary); font-weight: bold; margin-right: 15px; text-decoration: none;">
+        Witaj <?= htmlspecialchars($_SESSION['user_login']) ?>!</a>
+                <a href=Logowanie/logout.php class="btn-login">Wyloguj</a>
+                <?php else: ?>
+            <a href="logowanie/login.php" class="btn-login">Zaloguj</a>
+            <a href="logowanie/register.php" class="btn-register">Zarejestruj się</a>
+            <?php endif; ?>
         </div>
     </nav>
 
