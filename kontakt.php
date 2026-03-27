@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -16,8 +19,14 @@
             <a href="index.php">Strona główna</a>
             <a href="q.php">Wydarzenia</a>
             <a href="kontakt.php">Kontakt</a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <a href="moje_konto.php" style="color: var(--primary); font-weight: bold; margin-right: 15px; text-decoration: none;">
+        Witaj <?= htmlspecialchars($_SESSION['user_login']) ?>!</a>
+                <a href=Logowanie/logout.php class="btn-login">Wyloguj</a>
+                <?php else: ?>
             <a href="logowanie/login.php" class="btn-login">Zaloguj</a>
             <a href="logowanie/register.php" class="btn-register">Zarejestruj się</a>
+            <?php endif; ?>
         </div>
     </nav>
 
